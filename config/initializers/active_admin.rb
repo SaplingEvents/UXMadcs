@@ -38,7 +38,7 @@ ActiveAdmin.setup do |config|
   #
   # Note: Recommended image height is 21px to properly fit in the header
   #
-  config.site_title_image = "logo.png" #FIXME: change to your conference's logo (overwrite /app/assets/logo.png)
+  config.site_title_image = "logo.png"
 
   # == Default Namespace
   #
