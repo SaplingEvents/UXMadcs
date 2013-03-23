@@ -1,1 +1,1 @@
-rvm use 1.9.3@confskel --create #FIXME: configure this to your liking if you use rvm
+rvm use 1.9.3@uxmad
