@@ -1,7 +1,7 @@
 .site_header {
   @extend .clearfix;
   height: #{165 / $em}rem;
-  background: url(#{$imgDir}uxmad_logo.png) no-repeat 50% 10%;
+  background: url(logo.png) no-repeat 50% 10%;
   @include grid(12,12,percent);
   nav {
     @include grid(12,3,percent);
