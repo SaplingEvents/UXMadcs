@@ -1,15 +1,15 @@
 <li>
-  <a name="<%= speaker.twitter_username %>">
+  <a name="<%= speaker.twitter %>">
     <h2><%= speaker.name %></h2>
   </a>
 
   <div class="speaker-image-block">
-    <%= image_tag speaker.image_path, :class => 'speaker-image' if speaker.image_path.present? %>
+    <%= image_tag speaker.image, :class => 'speaker-image' if speaker.image.present? %>
   </div>
 
   <div class="speaker-description-block">
-    <%= link_to "Website", speaker.website_url %>
-    <%= link_to "Twitter", "http://www.twitter.com/" + speaker.twitter_username if speaker.twitter_username && !speaker.twitter_username.blank? %>
+    <%= link_to "Website", speaker.website %>
+    <%= link_to "Twitter", "http://www.twitter.com/" + speaker.twitter if speaker.twitter && !speaker.twitter.blank? %>
     <p><%= speaker.bio %></p>
   </div>
 </li>
