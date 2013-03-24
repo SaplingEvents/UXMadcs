@@ -6,9 +6,9 @@ Confskel::Application.routes.draw do
   resources :speakers, :only => [:index]
   resources :sponsors, :only => [:index]
 
-#  get "/speakers" => 'home#speakers'
-#  get "/sponsors" => 'home#sponsors'
-#  get "/schedule" => 'home#schedule'
+   get "/speakers" => 'home#speakers'
+   get "/sponsors" => 'home#sponsors'
+   get "/schedule" => 'schedule#index'
 #  get "/travel" => 'home#travel'
   get "/register" => 'home#register'
 #  get "/about" => 'home#about'

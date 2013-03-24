@@ -1,0 +1,18 @@
+#content{role: 'main'}
+
+  .site-width
+    %section#conference
+      .content-wrapper
+        %p{role: 'introduction'} UXMad is a one track conference with twenty-one sessions featuring speakers from near and far. The conference will showcase to locals the assets of the UX community and allow visitors to Madison a chance to experience one of the best, brainiest, and least expensive places in the US to live and work. And cheese.
+        %p UXMad takes advantage of the beautiful and iconic community owned spaces in Downtown Madison. The workshops take place at Madison College's Downton Campus. The conference proper takes place at the breathtaking Overture Center for the Arts.
+
+      %aside.schedule
+
+        - @sessions.each do |session|
+          %article{ class: ['vevent', ('vevent-talk' if session.session_type.downcase == 'talk')] }
+            %h1.summary= session.title
+            %time.dtstart{datetime: "#{get_datetime session.start}"}
+
+              ="#{get_hours session.start}:<span class=mins>#{get_minutes session.start}".html_safe
+            -if !session.speaker.nil? &&  session.session_type.downcase == 'talk'
+              %span= "with #{session.speaker.name}"
