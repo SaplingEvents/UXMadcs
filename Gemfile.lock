@@ -109,6 +109,7 @@ GEM
       actionpack (>= 3.0)
     gherkin (2.11.5)
       json (>= 1.4.6)
+    haml (3.1.7)
     has_scope (0.5.1)
     heroku (2.34.0)
       heroku-api (~> 0.3.7)
@@ -273,6 +274,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   faker
   fog
+  haml
   heroku
   heroku_san
   idkfa

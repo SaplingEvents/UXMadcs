@@ -14,6 +14,7 @@ gem 'mini_magick'
 gem 'idkfa'
 gem 'pg'
 gem 'validates_timeliness'
+gem 'haml'
 
 # Gems used only for assets and not required
 # in production environments by default.
