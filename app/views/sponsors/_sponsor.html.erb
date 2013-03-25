@@ -2,13 +2,13 @@
   <a name="<%= sponsor.twitter %>">
     <h2><%= sponsor.name %></h2>
   </a>
-  <%- if sponsor.image_path? %>
+  <%- if sponsor.image? %>
     <div class="sponsor-image-block">
-      <%= image_tag sponsor.image_path, :class => 'sponsor-image' %>
+      <%= image_tag sponsor.image, :class => 'sponsor-image' %>
     </div>
   <% end %>
   <div class="sponsor-description-block">
-    <p><%= link_to "Website", sponsor.url if sponsor.url %></p>
+    <p><%= link_to "Website", sponsor.website if sponsor.website %></p>
     <p><%= sponsor.description %></p>
   </div>
 </li>
