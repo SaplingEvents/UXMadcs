@@ -5,9 +5,22 @@
       .content-wrapper
         %p{role: 'introduction'}
 
+      %h1 Friday, July 11, 2013
       %aside.schedule
+        - @friday_sessions.each do |session|
+          %article{ class: ['vevent', ('vevent-talk' if session.session_type.downcase == 'talk')] }
+            %h1.summary= session.title
+            %time.dtstart{datetime: "#{get_datetime session.start}"}
 
-        - @sessions.each do |session|
+              ="#{get_hours session.start}:<span class=mins>#{get_minutes session.start}".html_safe
+            -if !session.speaker.nil? &&  session.session_type.downcase == 'talk'
+              %span= "with #{session.speaker.name}"
+            -if !session.description.nil?
+              %p.description= session.description
+
+      %h1 Saturday, July 12, 2013
+      %aside.schedule
+        - @saturday_sessions.each do |session|
           %article{ class: ['vevent', ('vevent-talk' if session.session_type.downcase == 'talk')] }
             %h1.summary= session.title
             %time.dtstart{datetime: "#{get_datetime session.start}"}
