@@ -1,0 +1,10 @@
+%li
+%a{:name => "#{speaker.twitter}"}
+  %h2= speaker.name
+  .speaker-image-block
+    = image_tag speaker.image, :class => 'speaker-image' if speaker.image.present?
+  .speaker-description-block
+    = link_to "Website", speaker.website if speaker.website && !speaker.website.blank?
+    = link_to "Twitter", "http://www.twitter.com/" + speaker.twitter if speaker.twitter && !speaker.twitter.blank?
+    %p= speaker.bio
+.clearfix.spacing
