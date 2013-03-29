@@ -15,3 +15,5 @@
               ="#{get_hours session.start}:<span class=mins>#{get_minutes session.start}".html_safe
             -if !session.speaker.nil? &&  session.session_type.downcase == 'talk'
               %span= "with #{session.speaker.name}"
+            -if !session.description.nil?
+              %p.description= session.description

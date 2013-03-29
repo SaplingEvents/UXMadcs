@@ -13,7 +13,7 @@ body#ScheduleIndex {
 
 
   div#content{
-    background: #fafafa;
+    //background: #fafafa;
     padding: 1.5em 0;
   }
 
@@ -28,6 +28,13 @@ body#ScheduleIndex {
   div#content p:first-of-type{
     font-size: 24px;
     color: #606060;
+  }
+
+  div#content p.description{
+    line-height: 1;
+    font-weight: normal;
+    font-size: 14px;
+    padding-top: 10px;
   }
 
 
@@ -75,7 +82,7 @@ body#ScheduleIndex {
   }
 
   aside article h1{
-    line-height: 1; 
+    line-height: 1;
     font-weight: normal;
     font-size: 16px;
   }
