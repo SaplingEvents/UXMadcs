@@ -1,8 +1,12 @@
 <li>
   <h2><%= speaker.name %></h2>
   <%= image_tag speaker.image, :class => 'speaker-image' if speaker.image.present? %>
-  <%= link_to "Website", speaker.website %>
-  <%= link_to "Twitter", "http://www.twitter.com/" + speaker.twitter if speaker.twitter %>
+  <%- if speaker.website.present? %>
+    <%= link_to "Website", speaker.website %>
+  <%- end %>
+  <%- if speaker.twitter.present? %>
+    <%= link_to "Twitter", "http://www.twitter.com/" + speaker.twitter %>
+  <%- end %>
   <p><%= truncate(speaker.bio, :length => 260) %></p>
   <p><%- if speaker.bio.length > 260 %>
     <%= link_to "More", "speakers##{speaker.twitter}" %>
