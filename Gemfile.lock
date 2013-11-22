@@ -111,17 +111,6 @@ GEM
       json (>= 1.4.6)
     haml (3.1.7)
     has_scope (0.5.1)
-    heroku (2.34.0)
-      heroku-api (~> 0.3.7)
-      launchy (>= 0.3.2)
-      netrc (~> 0.7.7)
-      rest-client (~> 1.6.1)
-      rubyzip
-    heroku-api (0.3.7)
-      excon (~> 0.16.10)
-    heroku_san (4.0.8)
-      heroku-api (>= 0.1.2)
-      rake
     hike (1.2.1)
     i18n (0.6.1)
     idkfa (0.0.3)
@@ -156,7 +145,6 @@ GEM
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
     net-ssh (2.6.3)
-    netrc (0.7.7)
     nokogiri (1.5.6)
     orm_adapter (0.4.0)
     pg (0.14.1)
@@ -197,8 +185,6 @@ GEM
       json (~> 1.4)
     responders (0.9.3)
       railties (~> 3.1)
-    rest-client (1.6.7)
-      mime-types (>= 1.16)
     rspec (2.12.0)
       rspec-core (~> 2.12.0)
       rspec-expectations (~> 2.12.0)
@@ -275,8 +261,6 @@ DEPENDENCIES
   faker
   fog
   haml
-  heroku
-  heroku_san
   idkfa
   jquery-rails
   json (~> 1.7.7)
