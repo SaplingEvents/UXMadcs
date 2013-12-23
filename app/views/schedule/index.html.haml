@@ -5,7 +5,7 @@
       .content-wrapper
         %p{role: 'introduction'}
 
-      %h1 Friday, July 12, 2013
+      %h1 Friday, July 11, 2014
       %aside.schedule
         - @friday_sessions.each do |session|
           %article{ class: ['vevent', ('vevent-talk' if session.session_type.downcase == 'talk')] }
@@ -18,7 +18,7 @@
             -if !session.description.nil?
               %p.description= session.description
 
-      %h1 Saturday, July 13, 2013
+      %h1 Saturday, July 12, 2014
       %aside.schedule
         - @saturday_sessions.each do |session|
           %article{ class: ['vevent', ('vevent-talk' if session.session_type.downcase == 'talk')] }
